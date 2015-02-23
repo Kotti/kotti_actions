@@ -1,0 +1,60 @@
+<!-- Actions's default workflow file.
+-->
+
+<configure xmlns="http://namespaces.repoze.org/bfg"
+           xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+           i18n:domain="Kotti">
+
+  <include package="repoze.workflow" file="meta.zcml"/>
+
+  <workflow
+      type="security"
+      name="simple"
+      state_attr="state"
+      initial_state="private"
+      content_types="kotti_actions.interfaces.IActionWorkflow"
+      elector='kotti_actions.workflow.elector'
+      permission_checker="pyramid.security.has_permission"
+      >
+
+    <state name="private" callback="kotti.workflow.workflow_callback">
+
+      <key name="title" value="_(u'Private')" />
+      <key name="order" value="1" />
+
+      <key name="inherit" value="0" />
+      <key name="system.Everyone" value="" />
+      <key name="role:viewer" value="viewaction view" />
+      <key name="role:editor" value="viewaction view add edit delete state_change" />
+      <key name="role:owner" value="viewaction view add edit delete manage state_change" />
+
+    </state>
+
+    <state name="public" callback="kotti.workflow.workflow_callback">
+
+      <key name="title" value="_(u'Public')" />
+      <key name="order" value="2" />
+
+      <key name="inherit" value="0" />
+      <key name="system.Everyone" value="viewaction" />
+      <key name="role:viewer" value="viewaction view" />
+      <key name="role:editor" value="viewaction view add edit delete state_change" />
+      <key name="role:owner" value="viewaction view add edit delete manage state_change" />
+
+    </state>
+
+  <transition
+      name="private_to_public"
+      from_state="private"
+      to_state="public"
+      permission="state_change" />
+
+  <transition
+      name="public_to_private"
+      from_state="public"
+      to_state="private"
+      permission="state_change" />
+
+  </workflow>
+
+</configure>
