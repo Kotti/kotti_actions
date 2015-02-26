@@ -7,6 +7,9 @@ History
 - Updated README.
   [davidemoro]
 
+- Fixed Travis CI build
+  [davidemoro]
+
 
 0.1 (2015-02-24)
 ----------------

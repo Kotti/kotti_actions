@@ -1,6 +1,9 @@
 kotti_actions
 ***************
 
+.. |build status stable| image:: https://img.shields.io/travis/truelab/kotti_actions/master.svg?style=flat-square
+.. _build status stable: http://travis-ci.org/truelab/kotti_actions
+
 This is a backend only extension that allows to add one or more
 action manager groups (navigation, header and footer links).
 Links can be nested. A sort of simple Plone's portal_actions implementation.
