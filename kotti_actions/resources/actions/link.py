@@ -20,6 +20,7 @@ class LinkAction(Document):
 
     id = Column(Integer, ForeignKey('documents.id'), primary_key=True)
     link = Column(Unicode(1000))
+    target = Column(Unicode(30))
 
     type_info = Document.type_info.copy(
         name=u'LinkAction',
@@ -28,7 +29,8 @@ class LinkAction(Document):
         addable_to=['LinkAction']  # updated at startup time
         )
 
-    def __init__(self, link=u"", **kwargs):
+    def __init__(self, link=u"", target=u"", **kwargs):
         super(LinkAction, self).__init__(**kwargs)
         self.link = link
         self.in_navigation = False
+        self.target = target

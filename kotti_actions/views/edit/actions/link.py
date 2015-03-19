@@ -6,6 +6,7 @@ Created on 2015-01-27
 """
 
 import colander
+from deform.widget import SelectWidget
 from kotti.views.edit import DocumentSchema
 from kotti.views.edit.content import DocumentEditForm
 from kotti.views.edit.content import DocumentAddForm
@@ -23,6 +24,12 @@ class LinkActionSchema(DocumentSchema):
         colander.String(),
         title=_('Link'),
         validator=link_validator,
+        missing=u'',
+        )
+    target = colander.SchemaNode(
+        colander.String(),
+        title=_('Target'),
+        widget=SelectWidget(values=[('', ''), ('_blank', '_blank')]),
         missing=u'',
         )
 
