@@ -19,3 +19,9 @@ def test_validate_ko():
         assert link_validator({}, 'https:google.it') is None
     with raises(colander.Invalid):
         assert link_validator({}, 'en/section') is None
+
+
+def test_validator_mailto():
+    from kotti_actions.validators import link_validator
+
+    assert link_validator({}, 'mailto:example@example.com') is None
