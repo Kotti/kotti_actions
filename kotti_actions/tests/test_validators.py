@@ -21,7 +21,15 @@ def test_validate_ko():
         assert link_validator({}, 'en/section') is None
 
 
-def test_validator_mailto():
+def test_validator_mailto_ok():
     from kotti_actions.validators import link_validator
 
     assert link_validator({}, 'mailto:example@example.com') is None
+
+
+def test_validator_mailto_ko():
+    from kotti_actions.validators import link_validator
+    import colander
+
+    with raises(colander.Invalid):
+        assert link_validator({}, 'mailto:example') is None
