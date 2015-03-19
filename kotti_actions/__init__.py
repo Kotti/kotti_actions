@@ -27,6 +27,7 @@ def kotti_configure(settings):
     :type settings: dict
     """
 
+    settings['kotti.alembic_dirs'] += ' kotti_actions:alembic'
     settings['pyramid.includes'] += ' kotti_actions'
 
     # register addable types
