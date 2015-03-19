@@ -15,7 +15,9 @@ History
 
   *IMPORTANT*: required migration from 0.1 version
   ``kotti-migrate yourconfigfile.ini upgrade --scripts=kotti_actions:alembic``
-  
+  [davidemoro]
+
+- Now the link attribute on LinkAction items supports also emails mailto:example@email.com
   [davidemoro]
 
 
