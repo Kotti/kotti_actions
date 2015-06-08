@@ -4,8 +4,12 @@ History
 0.1.2 (unreleased)
 ------------------
 
-- Update README (funding)
+- Update README (funding and project links)
   [davidemoro]
+
+- Transfer package ownership from ``truelab`` to ``Kotti`` organization
+  [davidemoro]
+
 
 0.1.1 (2015-03-19)
 ------------------

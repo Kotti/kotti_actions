@@ -9,10 +9,10 @@ Links can be nested. A sort of simple Plone's portal_actions implementation.
 
 `Find out more about Kotti`_
 
-Development happens at https://github.com/truelab/kotti_actions
+Development happens at https://github.com/Kotti/kotti_actions
 
-.. |build status| image:: https://secure.travis-ci.org/truelab/kotti_actions.png?branch=master
-.. _build status: http://travis-ci.org/truelab/kotti_actions
+.. |build status| image:: https://secure.travis-ci.org/Kotti/kotti_actions.png?branch=master
+.. _build status: http://travis-ci.org/Kotti/kotti_actions
 .. _Find out more about Kotti: http://pypi.python.org/pypi/Kotti
 
 You can add action managers only on navigation roots in this release.
