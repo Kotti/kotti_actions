@@ -4,8 +4,8 @@ History
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Update README (funding)
+  [davidemoro]
 
 0.1.1 (2015-03-19)
 ------------------

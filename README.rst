@@ -38,3 +38,10 @@ not clickable link groups.
 
 This plugin is intended to be used with Kotti as a backend administration area, with 
 a completely independent frontend.
+
+Funding
+=======
+
+Developed with the support of:
+
+* MIP (International Business School of Politecnico di Milano) - http://www.mip.polimi.it
